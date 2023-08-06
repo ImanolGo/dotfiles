@@ -10,7 +10,7 @@ Currently, this repository provides configurations for the following:
 
 ## How to Use
 
-1. Clone this repository: `git clone https://github.com/username/dotfiles.git`
+1. Clone this repository: `git clone https://github.com/imanolgo/dotfiles.git`
 2. Navigate into the repository: `cd dotfiles`
 3. Run the global installation script: `sh install.sh`
 
