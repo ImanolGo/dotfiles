@@ -8,6 +8,7 @@ Currently, this repository provides configurations for the following:
 
 - 🐠 [Fish Shell](https://fishshell.com/)
 - 🐱 [Kitty Terminal](https://sw.kovidgoyal.net/kitty/)
+- 🪟 [Sway](https://swaywm.org/)
 
 ## 🚀 How to Use
 
@@ -26,3 +27,7 @@ The Fish Shell is a smart and user-friendly command line shell for macOS, Linux,
 ### 🐱 Kitty Terminal
 
 Kitty is a modern, hackable, feature-rich, and OpenGL based terminal emulator. It's designed for power keyboard users. Check out my custom configurations in the 'kitty' directory.
+
+### 🪟 Sway
+
+Sway is a tiling Wayland compositor and a drop-in replacement for the i3 window manager for X11. My custom configurations for Sway can be found in the 'sway' directory.
