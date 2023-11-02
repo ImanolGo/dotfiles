@@ -24,6 +24,12 @@ alias gp='git push'
 alias gpl='git pull'
 alias gl='git log'
 
+# Neovim aliases
+#alias vi="nvim"
+#alias vim="nvim"
+#alias view="nvim -R"
+#alias vimdiff="nvim -d"
+
 
 # Set the color scheme
 set -U fish_color_normal white
