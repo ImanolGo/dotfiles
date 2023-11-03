@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Define the directory where the script is located
-#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # Neovim configuration directory
 NVIM_CONFIG_DIR="$HOME/.config/nvim"
