@@ -42,3 +42,11 @@ set -U fish_color_quote yellow
 # end
 
 # ... More configuration as needed
+
+# Libtorch paths
+set -x PATH /usr/local/libtorch/bin $PATH
+set -x LD_LIBRARY_PATH /usr/local/libtorch/lib $LD_LIBRARY_PATH
+
+# Add Cargo
+set -gx PATH $HOME/.cargo/bin $PATH
+
