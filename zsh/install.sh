@@ -14,7 +14,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
 
 # Install Powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -24,6 +23,14 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # Create a symbolic link for the .zshrc configuration
 ln -sfn $DIR/zshrc ~/.zshrc
+
+# Check if Rust is installed and install Rust autocompletion
+if command -v rustup >/dev/null 2>&1; then
+    mkdir -p ~/.zsh/completion
+    rustup completions zsh > ~/.zsh/completion/_cargo
+    echo 'fpath=(~/.zsh/completion $fpath)' >> ~/.zshrc
+fi
+
 
 # Source the .zshrc to apply changes (optional here because it will happen when you open a new shell)
 # source ~/.zshrc
