@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env fish
 
 # Get the directory where the script is located
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+set DIR (cd (dirname (status filename)) && pwd)
 
 # Create the ~/.config/fish directory if it doesn't exist
 mkdir -p ~/.config/fish
@@ -10,9 +10,10 @@ mkdir -p ~/.config/fish
 ln -sfn $DIR/config.fish ~/.config/fish/config.fish
 
 # Install Fisher (package manager for Fish)
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+curl -sL https://git.io/fisher > ~/.config/fish/functions/fisher.fish
+source ~/.config/fish/functions/fisher.fish; and fisher install jorgebucaran/fisher
 
 # Install Tide using Fisher
-fish -c "fisher install IlanCosman/tide"
+fisher install IlanCosman/tide
 
 echo "Fish configuration complete."
