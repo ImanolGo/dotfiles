@@ -16,4 +16,7 @@ source ~/.config/fish/functions/fisher.fish; and fisher install jorgebucaran/fis
 # Install Tide using Fisher
 fisher install IlanCosman/tide
 
+# Install bang-bang using Fisher
+fisher install oh-my-fish/plugin-bang-bang
+
 echo "Fish configuration complete."
